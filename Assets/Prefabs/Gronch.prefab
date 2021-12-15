@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6870965053117027575}
   - component: {fileID: 6870965053117027574}
   - component: {fileID: 8833863554323715022}
+  - component: {fileID: 4703936023518781945}
   m_Layer: 0
   m_Name: Gronch
   m_TagString: Untagged
@@ -153,3 +154,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.60302246, y: 0.36039138}
   m_EdgeRadius: 0
+--- !u!114 &4703936023518781945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6870965053117027561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ed882b65a0acc749a7c1e34162e4521, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
