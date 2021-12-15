@@ -5,12 +5,12 @@ using UnityEngine;
 public class GronchCollecting : MonoBehaviour
 {
     bool spaceHit = false;
-
-
+    Present presentCollected;
+    PresentHoldPoint presentHolder;
     // Start is called before the first frame update
     void Start()
     {
-        
+        presentHolder = GetComponent<PresentHoldPoint>();
     }
 
     // Update is called once per frame
@@ -23,10 +23,23 @@ public class GronchCollecting : MonoBehaviour
     {
         if(collision.gameObject.tag == "Present")
         {
-            if(spaceHit)
+            if (spaceHit)
             {
                 Debug.Log("PresentCollected");
+
+
+                if (collision.TryGetComponent<Present>(out presentCollected)) 
+                {
+                    collision.enabled = false;
+                    presentHolder.HoldPresent(presentCollected);
+                }
             }
         }
     }
+    void PresentReset()
+    {
+        presentCollected = null;
+        presentHolder.presentNotHeld();
+    }
+
 }
